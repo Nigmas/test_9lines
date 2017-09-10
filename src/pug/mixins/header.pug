@@ -1,0 +1,7 @@
+mixin header(contact, photo)
+    section.header.grid-x
+        .small-4.small-offset-2.medium-2.medium-offset-0.cell.header__photo
+            img(src= photo, alt="face")
+        ul.small-8.medium-6.cell.header__contact
+            each item in contact
+                li.header__item= item

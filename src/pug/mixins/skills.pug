@@ -1,0 +1,15 @@
+mixin skills(data)
+    section.skills
+        h2.skills__title Навыки
+        ul.grid-x.skills__list
+            each item in data
+                if (item.checked)                
+                    li.small-4.medium-2.cell.skills__item
+                        label
+                            input.skills__input(type="checkbox" name=item.name value=item.name checked)
+                            span.skills__checkbox #{item.name}
+                else
+                    li.small-4.medium-2.cell.skills__item
+                        label
+                            input.skills__input(type="checkbox" name=item.name value=item.name)
+                            span.skills__checkbox #{item.name}

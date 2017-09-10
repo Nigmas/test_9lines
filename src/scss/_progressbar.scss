@@ -1,0 +1,76 @@
+.progressbar {
+    margin-top: 2px;
+    padding: 5.6rem 0 6.3rem 2rem;
+    background-image: url(../images/bg_img.jpg);
+    background-repeat: no-repeat repeat;
+    background-position: center bottom;
+
+    @media only screen and (max-width : 640px) {
+        padding-left: 0;
+    }
+
+    &__scale {
+        position: relative;
+
+        @media only screen and (max-width : 640px) {
+            text-align: center;
+        }
+
+        svg {
+            width: 253px;            
+        }        
+    }
+
+    &__arrow {
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left:  70px;
+        width: 67px;
+        height: 19px;
+        background: url(../images/arrow.svg) no-repeat;
+        background-position: right center;
+        transform-origin: 85% 50%;
+        transform: rotate(0deg);
+
+        @media only screen and (max-width : 640px) {
+            left: calc(50% - 56px);
+        }
+    }
+
+    &__text {
+        margin-top: 0.6rem;
+
+        @media only screen and (max-width : 640px) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__title {
+        font-family: $font-family-roboto;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.33;
+        text-align: left;
+        color: $color-black;
+
+        @media only screen and (max-width : 640px) {
+            text-align: center;
+        }
+    }
+
+    &__count {
+        margin-top: 3rem;
+        font-family: $font-family-roboto;
+        font-size: 50px;
+        font-weight: 900;
+        line-height: 0.44;
+        letter-spacing: 2.5px;
+        text-align: left;
+        color: $color-blue;
+
+        @media only screen and (max-width : 640px) {
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.skills {
+    margin-top: 2px;
+    padding: 3.2rem 0 0 2rem;
+    background-image: url(../images/bg_img.jpg);
+    background-repeat: no-repeat repeat;
+    background-position: center center;
+
+    &__title {
+        font-family: $font-family-roboto;
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-align: left;
+        color: $color-black;
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        margin-top: 1.9rem;
+    }
+
+    &__item {
+        margin-bottom: 4rem;
+
+        label {
+            display: inline-block;
+            cursor: pointer;
+        }
+    }
+
+    &__input {
+        display: none;
+    }
+
+    &__checkbox {
+        @include greyText;
+        position: relative;
+        line-height: 1.9rem;
+        padding-left: 2.7rem;
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 0;
+            width: 1.9rem;
+            height: 1.9rem;
+            background-color: $color-body-bg;
+            border-radius: .5rem;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__input:checked + &__checkbox::after {
+        background-color: $color-blue;
+        background-image: url(../images/checked.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

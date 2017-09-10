@@ -1,0 +1,36 @@
+extends pug/base
+
+append vars
+	- html.classList.push('page-index')
+
+include pug/mixins/header
+include pug/mixins/skills
+include pug/mixins/progressbar
+
+block content
+	.wrapper
+		+header({
+			"name": "Самгин Станислав",
+			"born": "31.07.1985",
+			"city": "г. Симферополь",
+			"mail": "stassamgin@gmail.com"
+			},
+			"images/headshot-min.jpg"
+		)
+
+		+skills([
+			{"name": "html5", "checked": true},
+			{"name": "sass", "checked": true},
+			{"name": "vanillajs", "checked": true},
+			{"name": "git", "checked": true},
+			{"name": "css3", "checked": true},
+			{"name": "less", "checked": false},
+			{"name": "angular", "checked": false},
+			{"name": "foundation", "checked": true},
+			{"name": "БЭМ", "checked": true},
+			{"name": "gulp", "checked": true},
+			{"name": "jquery", "checked": true},
+			{"name": "bootstrap", "checked": true}
+		])
+
+		+progressbar()
